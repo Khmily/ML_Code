@@ -61,7 +61,7 @@ b_conv2 = bias_variable([64])
 h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)  # output size 14x14x64
 h_pool2 = max_pool_2x2(h_conv2)  # output size 7x7x64
 
-## full_connect connection 全连接层 ##
+## full_connect layer 全连接层 ##
 W_fc1 = weight_variable([7 * 7 * 64, 1024])
 b_fc1 = bias_variable([1024])
 # [n_samples, 7, 7, 64] ->> [n_samples, 7*7*64]
